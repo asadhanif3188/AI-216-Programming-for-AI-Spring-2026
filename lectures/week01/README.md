@@ -40,8 +40,8 @@ By the end of Week 1, you should be able to:
 ## 4. Toolchain: what you must have set up this week
 
 ### A) Python + IDE
-- Install Python (recommended version announced by instructor)
-- Install an IDE (VS Code / PyCharm / preferred IDE)
+- Install `Python` (recommended version announced by instructor)
+- Install an IDE (`VS Code` / `Jupyter Notebook` / `PyCharm` / preferred IDE)
 - Confirm you can run a simple Python file locally
 
 ### B) GitHub (version control)
@@ -72,7 +72,7 @@ AI-216-Labs/
 ## 5. In-class activity: Job Posting Skill Mining (20–25 minutes)
 
 ### Instructions
-In groups of 3–4, analyze **2–3 real AI/ML Engineer job postings** (provided by the instructor).
+In groups of 2–3, analyze **4–5 real AI/ML Engineer job postings**.
 
 Extract and summarize:
 1. **Required skills** (Python, data handling, ML basics, Git, etc.)
@@ -91,7 +91,7 @@ Extract and summarize:
   - ML:
   - Tools:
 - One surprising requirement:
-- Mapping to this course: “Which weeks will help us build these skills?”
+- Mapping to this course: **Which weeks will help us build these skills?**
 
 ---
 
