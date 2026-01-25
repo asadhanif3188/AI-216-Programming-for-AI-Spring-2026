@@ -1,4 +1,4 @@
-# AI-216 – Lab 01: GitHub Setup & First Push
+# Lab 01: GitHub Setup & First Push
 
 **Week #1**  
 **Topic:** Course Toolchain Setup: Git/GitHub + Repository Structure + README  
@@ -43,8 +43,8 @@ git config --global --list
 
 ### Task 2 — Create the official AI-216 course repository on GitHub
 
-- On GitHub, create a new repository named: AI-216-Programming-for-AI (Public or Private as instructed).
-- Do NOT initialize with README (you will add it locally).
+- On GitHub, create a new repository named: **AI-216-Programming-for-AI** (Public or Private as instructed).
+- Do **NOT** initialize with README (you will add it locally).
 - Create the required folder structure locally:
 
 ```bash
@@ -59,10 +59,10 @@ AI-216-Programming-for-AI/
 
 ### Task 3 — Add your first Python script (Week 1)
 
-- Inside labs/week01/, create a file named hello_ai216.py.
+- Inside `labs/week01/`, create a file named `hello_ai216.py`.
 - Script requirements:
   - Prints your name and ID
-  - Prints Python version (use sys.version)
+  - Prints Python version (use `sys.version`)
   - Prints a short 2–3 line message: “What Programming for AI means to me”
 
 ```bash
@@ -72,9 +72,9 @@ AI-216-Programming-for-AI/
 # - print 2–3 line reflection
 ```
 
-### Task 4 — Initialize Git, commit, and push to GitHub
+### Task 4 — Initialize Git, commit, and push to GitHub (first push)
 
-- Open terminal in AI-216-Programming-for-AI/ and run the standard workflow: init → add → commit → remote → push.
+- Open terminal in `AI-216-Programming-for-AI/` and run the standard workflow: init → add → commit → remote → push.
 - Use a meaningful commit message (example provided).
 
 ```bash
@@ -88,15 +88,60 @@ git branch -M main
 git push -u origin main
 ```
 
-### Task 5 — Write a professional README for Week 1 folder
+### Task 5 — Add a Python/VS Code `.gitignore` (required)
 
-- Create labs/week01/README.md with:
+- Create a `.gitignore` in the repository root (same level as `README.md`).
+- Include common ignores for:
+  - Python cache (`__pycache__/`, `*.pyc`)
+  - Virtual environments (`.venv/`, `venv/`)
+  - Jupyter checkpoints (`.ipynb_checkpoints/`)
+  - VS Code (`.vscode/`)
+- Commit and push this as a **separate commit**.
+
+```bash
+git add .gitignore
+git commit -m "Lab01: add Python/VS Code gitignore"
+git push
+```
+
+### Task 6 — Branch workflow: improve README and merge (required)
+
+- Create a new branch named: `week01-readme-improve`
+- Edit **only** `labs/week01/README.md` to improve clarity (e.g., add better structure, clearer learning bullets, AI/ML relevance).
+- Commit on the branch, then merge back into `main`, and push.
+
+```bash
+git checkout -b week01-readme-improve
+# edit labs/week01/README.md
+git add labs/week01/README.md
+git commit -m "Lab01: improve week01 README"
+git checkout main
+git merge week01-readme-improve
+git push
+```
+
+### Task 7 — Second commit: improve script formatting + docstring (required)
+
+- Update `labs/week01/hello_ai216.py`:
+  - Add a module-level docstring (1–3 lines).
+  - Improve output formatting (clean labels, consistent spacing, readable lines).
+- Commit and push this as a **separate commit** (different from the `.gitignore` and README commits).
+
+```bash
+git add labs/week01/hello_ai216.py
+git commit -m "Lab01: improve hello script formatting + docstring"
+git push
+```
+
+### Task 8 — Write a professional README for the Week 1 folder
+
+- Ensure `labs/week01/README.md` includes:
   - Brief description of what you did
   - Key Git commands used
   - What you learned (3 bullets)
   - How this supports AI/ML workflows (reproducibility + collaboration)
 
-```bash
+```md
 # Lab 01 – GitHub Setup & First Push
 
 ## What this lab does
@@ -107,6 +152,8 @@ git push -u origin main
 - git add .
 - git commit -m "..."
 - git push
+- git checkout -b ...
+- git merge ...
 
 ## What I learned
 - ...
@@ -117,14 +164,15 @@ git push -u origin main
 ...
 ```
 
-
-## 5. GitHub Submission Checklist ✅
+## 5. GitHub Submission Checklist
 
 - Repository name matches the course standard.
-- Folder structure exists: labs/week01, assignments, project.
-- hello_ai216.py exists in labs/week01.
-- labs/week01/README.md exists and is meaningful.
-- Commits are meaningful (not 'update' / 'final').
+- Folder structure exists: `labs/week01`, `assignments/assignment01`, `project`.
+- `labs/week01/hello_ai216.py` exists and runs.
+- `labs/week01/README.md` exists and is meaningful.
+- A root-level `.gitignore` exists (Python + VS Code appropriate).
+- Branch `week01-readme-improve` was created and merged back to `main`.
+- There are **at least 3 meaningful commits** (example: initial push, `.gitignore`, README improvement merge, script improvement).
 - All work is pushed to GitHub (verify by opening the repo in a browser).
 
 ## 6. LinkedIn Reflection (If Required)
@@ -138,15 +186,16 @@ git push -u origin main
 
 - Configure Git and perform basic repository operations (init, add, commit, push).
 - Create and maintain the required course repository structure.
+- Use `.gitignore` to avoid committing unnecessary files.
+- Use a feature-branch workflow (create branch, commit, merge).
 - Document work using a professional README.
-- Explain how version control supports AI programming workflows.
+- Explain how version control supports AI programming workflows (reproducibility, collaboration, traceability).
 
 <!-- ## 8. Evaluation Criteria
 
 | Component | Weight |
 |---|---:|
-
-| Task completion (all required files + structure) | 40% |
-| Correct GitHub usage (init, commits, push; meaningful messages) | 30% |
+| Task completion (all required files + structure + `.gitignore`) | 40% |
+| Correct GitHub usage (commits, push, branch + merge; meaningful messages) | 30% |
 | Documentation quality (README clarity + completeness) | 20% |
 | Reflection (LinkedIn or written alternative) | 10% | -->
