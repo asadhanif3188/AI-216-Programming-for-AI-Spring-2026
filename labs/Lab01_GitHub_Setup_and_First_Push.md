@@ -164,6 +164,13 @@ git push
 ...
 ```
 
+### Task 9 — AI-assisted debugging & documentation
+
+1. Ask ChatGPT: **What does .gitignore do and why do we need it?**
+2. Ask ChatGPT: **Review my README for clarity; suggest improvements**.
+3. Ask ChatGPT: **Suggest 3 formatting improvements for my script output + a module docstring**.
+4. Record everything in the AI Usage Log section of `labs/week01/README.md`.
+
 ## 5. GitHub Submission Checklist
 
 - Repository name matches the course standard.
