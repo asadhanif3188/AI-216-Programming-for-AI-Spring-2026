@@ -139,7 +139,7 @@ Write a program that:
 
 ---
 
-## 5. GitHub Submission Checklist ✅
+## 5. GitHub Submission Checklist
 
 Before submitting, ensure:
 - Code is pushed to:  
