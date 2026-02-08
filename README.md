@@ -65,6 +65,6 @@ Students are expected to maintain a clean GitHub repository throughout the semes
 
 ## Instructor
 
-**Course Instructor:** Asad Hanif (asadhanif3188@gmail.com)
+**Course Instructor:** Asad Hanif (asadhanif3188@gmail.com) 
 **Department:** Computing  
 **Program:** BS Artificial Intelligence
