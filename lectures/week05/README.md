@@ -625,7 +625,7 @@ Use AI tools for understanding, debugging, and reasoning.
 
 ---
 
-# 8. Looking Ahead
+<!-- # 8. Looking Ahead
 
 In Week 6, we will explore:
 - Exploratory Data Analysis (EDA)
@@ -637,4 +637,4 @@ NumPy and Pandas will become the backbone of your ML workflow.
 ---
 
 **End of Week 05 Lecture**
-
+ -->

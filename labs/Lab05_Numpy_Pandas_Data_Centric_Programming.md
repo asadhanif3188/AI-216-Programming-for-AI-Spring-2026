@@ -20,8 +20,6 @@ Students will:
 - Perform filtering, slicing, grouping, and aggregation
 - Prepare structured data for machine learning workflows
 
-This lab is inspired by previous NumPy and EDA labs fileciteturn4file0 fileciteturn4file1 but contains **new datasets and problem scenarios** aligned with Week 5 lecture.
-
 ---
 
 ## 2. Tools & Requirements
@@ -215,7 +213,7 @@ README must explain:
 - How missing data was handled
 
 ---
-
+<!-- 
 # 7. Evaluation Criteria
 
 | Criterion | Weight |
@@ -229,4 +227,4 @@ README must explain:
 ---
 
 **End of Lab 05**
-
+ -->
