@@ -294,7 +294,7 @@ Your README must explain:
 
 ---
 
-# 10. Evaluation Criteria
+<!-- # 10. Evaluation Criteria
 
 | Criterion | Weight |
 |---------|--------|
@@ -306,5 +306,5 @@ Your README must explain:
 
 ---
 
-**End of Lab 06**
+**End of Lab 06** -->
 
