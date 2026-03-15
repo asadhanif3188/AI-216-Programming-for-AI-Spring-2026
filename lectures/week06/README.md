@@ -881,7 +881,7 @@ Students may use AI tools for learning and debugging.
 
 ---
 
-# 8. Looking Ahead
+<!-- # 8. Looking Ahead
 
 Next week we will explore:
 
@@ -893,5 +893,5 @@ Understanding where data comes from is essential before building AI models.
 
 ---
 
-**End of Week 06 Lecture**
+**End of Week 06 Lecture** -->
 
