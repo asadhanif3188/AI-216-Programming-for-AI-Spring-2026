@@ -442,7 +442,7 @@ Later, Python programs can retrieve and analyze this information.
 
 ## Databases vs CSV Files
 
-Students often ask why databases are used instead of CSV files.
+Why databases are used instead of CSV files.
 
 | Feature | CSV File | Database |
 |--------|----------|---------|
