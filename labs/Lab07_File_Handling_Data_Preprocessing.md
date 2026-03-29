@@ -76,11 +76,7 @@ You are given two data sources. **Read both carefully before writing any code.**
 
 ## 5. Tasks
 
-> **Difficulty Guide:** 🟢 Basic &nbsp;|&nbsp; 🟡 Intermediate &nbsp;|&nbsp; 🔴 Advanced
-
----
-
-### Task 1 — Load and Inspect Data 🟢
+### Task 1 — Load and Inspect Data 
 
 **Why this matters:** Before touching any data, your first job is always to understand what you actually have. Jumping into cleaning without inspection is one of the most common and costly mistakes in real projects.
 
@@ -95,11 +91,11 @@ You are given two data sources. **Read both carefully before writing any code.**
 
 **Expected Output Hint:** After loading `applicants.csv`, your missing value count should show at least 3 columns with issues. If you see fewer, re-check how you created the file.
 
-> 🤔 **Reflect:** Compare what you found in code with the list you wrote before starting. Did Pandas catch every problem you spotted manually? Was there anything Pandas flagged that you missed — or anything you caught that Pandas did not? Why might that happen?
+> **Reflect:** Compare what you found in code with the list you wrote before starting. Did Pandas catch every problem you spotted manually? Was there anything Pandas flagged that you missed — or anything you caught that Pandas did not? Why might that happen?
 
 ---
 
-### Task 2 — Merge Datasets 🟢
+### Task 2 — Merge Datasets
 
 **Why this matters:** Real data is almost never in one file. In production, you will regularly join multiple tables or API responses. Understanding what happens at the join is critical — a wrong merge can silently drop rows or duplicate them.
 
@@ -112,11 +108,11 @@ You are given two data sources. **Read both carefully before writing any code.**
 
 **Expected Output Hint:** The merged DataFrame should have 6 rows and 8 columns. If you get more or fewer rows, your join type may be wrong.
 
-> 🤔 **Reflect:** Notice that `applicants_extra.json` only has 5 records (ids 1–5), while `applicants.csv` has 6 (ids 1–6). What happens to Row 6 (id=6) depending on which join type you use? Which join type preserves all applicants, and which one drops the unmatched one? Which choice is correct for this scenario — and why?
+> **Reflect:** Notice that `applicants_extra.json` only has 5 records (ids 1–5), while `applicants.csv` has 6 (ids 1–6). What happens to Row 6 (id=6) depending on which join type you use? Which join type preserves all applicants, and which one drops the unmatched one? Which choice is correct for this scenario — and why?
 
 ---
 
-### Task 3 — Handle Missing Values 🟡
+### Task 3 — Handle Missing Values
 
 **Why this matters:** How you fill missing values directly affects what your model learns. A wrong fill strategy can introduce bias or mask real patterns in the data.
 
@@ -132,14 +128,14 @@ You are given two data sources. **Read both carefully before writing any code.**
 
 **Constraint:** After completing this task, run `df.isnull().sum()` again. The total missing count across all columns should be 0 (or you should be able to explain why any remaining nulls are intentional).
 
-> 🤔 **Reflect:**
+> **Reflect:**
 > - Why did we use **median** for `age` and `salary` instead of **mean**? Under what condition would mean be a better choice?
 > - Why did we fill missing `experience` with `0` instead of the median? Could this assumption ever be wrong?
 > - Row 6 is missing a `name`. Is `name` a feature you would pass to a model? Does that change how you handle it?
 
 ---
 
-### Task 4 — Clean Inconsistent Data 🟡
+### Task 4 — Clean Inconsistent Data
 
 **Why this matters:** "isl", "Islamabad", and "islamabad" are three different strings to a machine learning model. Inconsistent labels create phantom categories that corrupt your model's understanding of the data.
 
@@ -152,13 +148,13 @@ You are given two data sources. **Read both carefully before writing any code.**
 
 **Expected Output Hint:** After cleaning, `df["city"].unique()` should return exactly 4 unique city names with no duplicates or near-duplicates.
 
-> 🤔 **Reflect:**
+> **Reflect:**
 > - Why is it better to standardize to lowercase rather than to Title Case or UPPERCASE?
 > - In a dataset with hundreds of unique city names, doing this manually would not be practical. What would a smarter, scalable approach look like?
 
 ---
 
-### Task 5 — Feature Engineering 🟡
+### Task 5 — Feature Engineering
 
 **Why this matters:** Raw numeric values are not always the most useful representation for a model. Creating derived features — like binning continuous experience into categories — can make patterns easier for a model to learn.
 
@@ -176,13 +172,13 @@ Create a new column called `experience_level` based on the following rules:
 
 **Expected Output Hint:** After this task, your DataFrame should have a new `experience_level` column. With the cleaned data from Tasks 3 and 4, you should see a mix of all three labels across the 6 rows.
 
-> 🤔 **Reflect:**
+> **Reflect:**
 > - The `experience_level` column is a text label ("junior", "mid", "senior"). Can a machine learning model use it directly as-is? If not, what would you need to do to it before training?
 > - Why might a hiring model benefit from having both `experience` (raw number) **and** `experience_level` (binned category) as separate features?
 
 ---
 
-### Task 6 — Normalize Numeric Features 🟡
+### Task 6 — Normalize Numeric Features
 
 **Why this matters:** Without normalization, a feature like `expected_salary` (range: 40,000–90,000) would dominate distance-based models and overshadow features like `age` (range: 19–30) or `experience` (range: 0–7).
 
@@ -197,13 +193,13 @@ Apply **Min-Max normalization** to the following columns:
 
 **Expected Output Hint:** After normalization, all three columns should contain values strictly between 0.0 and 1.0 (inclusive). The smallest value in each column should be exactly 0.0, and the largest should be exactly 1.0.
 
-> 🤔 **Reflect:**
+> **Reflect:**
 > - We normalized `age` and `experience` — but should we also normalize `experience_level`? Why or why not?
 > - At what point in the pipeline should normalization happen — before or after the train/test split? Why does the order matter? *(This was covered in the lecture — refer back if needed.)*
 
 ---
 
-### Task 7 — Build a Preprocessing Function 🔴
+### Task 7 — Build a Preprocessing Function
 
 **Why this matters:** In any real project, preprocessing is not a one-time operation. You run it on training data today, and you will run it on new incoming applicants tomorrow. A function ensures every piece of data goes through exactly the same steps every time — no exceptions.
 
@@ -229,13 +225,13 @@ The function must:
 
 **Constraint:** The function should not hardcode specific values from the current dataset. For example, instead of `df["age"].fillna(22.5)`, use `df["age"].fillna(df["age"].median())` so the function works correctly on any new batch of data.
 
-> 🤔 **Reflect:**
+> **Reflect:**
 > - What would happen if someone passed a DataFrame with a completely different set of city abbreviations into your function? Would it still work correctly? How would you make it more robust?
 > - Your function currently computes the median from whatever data is passed in. In a real deployment, should the median be recomputed every time, or should it be calculated once from the training data and stored? Why?
 
 ---
 
-### Task 8 (Optional – Advanced) — Skills Analysis 🔴
+### Task 8 (Optional – Advanced) — Skills Analysis 
 
 **Why this matters:** The `skills` column contains Python lists — not a format any ML model can use directly. Before a model can learn from skills data, you need to convert it into numeric form. This is a simplified version of a real technique called feature extraction from text.
 
@@ -252,7 +248,7 @@ The function must:
 
 **Expected Output Hint:** After Part B, your DataFrame should have one new column for each unique skill found in the dataset. Count how many unique skills there are first, then verify your DataFrame gained that many new columns.
 
-> 🤔 **Reflect:**
+> **Reflect:**
 > - In this dataset we have 6 applicants and a small number of skills. In a real dataset with 10,000 applicants and 500 unique skills, this approach would create 500 new columns. What problems could that cause for a model? What is the term for this problem?
 > - After converting skills to binary columns, do those columns need to be normalized? Why or why not?
 
