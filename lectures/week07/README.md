@@ -1304,4 +1304,4 @@ This lecture bridges raw data collection and the modeling phase. After this week
 
 ---
 
-End of Lecture Document
+<!-- End of Lecture Document -->
