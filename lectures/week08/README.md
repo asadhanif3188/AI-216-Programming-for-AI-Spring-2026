@@ -1,11 +1,11 @@
 # AI-216: Programming for Artificial Intelligence
-## Week 15 – Machine Learning Pipeline & Model Evaluation
+## Week 08 – Machine Learning Pipeline & Model Evaluation
 
 ---
 
 ## Lecture Overview
 
-By Week 15, students have learned:
+By Week 08, students have learned:
 - Data handling (NumPy, Pandas)
 - Data collection (scraping, databases)
 
@@ -585,5 +585,5 @@ This forms the foundation of real-world AI systems.
 
 ---
 
-**End of Week 15 Lecture**
+**End of Week 08 Lecture**
 
