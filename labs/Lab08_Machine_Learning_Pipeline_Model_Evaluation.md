@@ -1,9 +1,9 @@
 # AI-216 – Programming for Artificial Intelligence
-## Lab 15: Machine Learning Pipeline & Model Evaluation
+## Lab 08: Machine Learning Pipeline & Model Evaluation
 
 ---
 
-### Week #: 15  
+### Week #: 08  
 ### Topic: Training vs Testing, Model Evaluation & scikit-learn Workflow
 
 ---
@@ -20,7 +20,7 @@ Students will:
 - Compare model performance
 - Understand real-world ML workflow
 
-This lab is inspired by earlier scikit-learn practices fileciteturn7file0 but introduces **new datasets and structured tasks aligned with Week 15 lecture**.
+This lab is inspired by earlier scikit-learn practices fileciteturn7file0 but introduces **new datasets and structured tasks aligned with Week 08 lecture**.
 
 ---
 
@@ -218,8 +218,8 @@ Compare all three models and identify:
 ```text
 AI-216-Programming-for-AI/
 └── labs/
-    └── week15/
-        ├── lab15.py or .ipynb
+    └── week08/
+        ├── lab08.py or .ipynb
         └── README.md
 ```
 
@@ -230,18 +230,18 @@ README must include:
 - One observation about model performance
 
 ---
-
+<!-- 
 # 10. Evaluation Criteria
 
 | Criterion | Weight |
 |----------|--------|
-| Data preparation & splitting | 15% |
+| Data preparation & splitting | 08% |
 | Model implementation | 25% |
 | Evaluation metrics usage | 25% |
 | Analysis & comparison | 20% |
-| Code clarity & documentation | 15% |
+| Code clarity & documentation | 08% |
 
 ---
 
-**End of Lab 15**
-
+**End of Lab 08**
+ -->
