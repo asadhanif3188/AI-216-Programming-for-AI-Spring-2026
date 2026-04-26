@@ -1,8 +1,6 @@
 # AI-216: Programming for Artificial Intelligence
 ## Week 09 – Model Improvement, Cross-Validation & Hyperparameter Tuning
 
----
-
 ## Lecture Overview
 
 In Week 08, you learned how to:
@@ -20,7 +18,6 @@ This lecture focuses on:
 - Cross-validation for reliable evaluation
 - Hyperparameter tuning
 
----
 
 ## Learning Objectives
 
@@ -32,7 +29,6 @@ After this lecture, students will be able to:
 - Perform basic hyperparameter tuning
 - Compare multiple models effectively
 
----
 
 # 1. Model Improvement: Why It Matters
 
@@ -50,7 +46,6 @@ Goal:
 Build a model that generalizes well to new data
 ```
 
----
 
 # 2. Overfitting vs Underfitting
 
@@ -59,7 +54,6 @@ Build a model that generalizes well to new data
 - **Underfitting** → Model is too simple
 - **Overfitting** → Model is too complex
 
----
 
 ## Example
 
@@ -69,8 +63,6 @@ from sklearn.tree import DecisionTreeClassifier
 model = DecisionTreeClassifier(max_depth=1)  # Underfitting
 model = DecisionTreeClassifier(max_depth=10) # Potential overfitting
 ```
-
----
 
 ## Intermediate Example – Observing Behavior
 
@@ -82,7 +74,6 @@ print("Train Accuracy:", model.score(X_train, y_train))
 print("Test Accuracy:", model.score(X_test, y_test))
 ```
 
----
 
 ## Advanced Insight
 
@@ -92,11 +83,9 @@ print("Test Accuracy:", model.score(X_test, y_test))
 | High train, low test | Overfitting |
 | High train, high test | Good model |
 
----
 
 # 3. Improving Models (Practical Strategies)
 
----
 
 ## Basic Strategies (with Code)
 
@@ -109,8 +98,6 @@ y = df["target"]
 
 # More data generally improves generalization
 ```
-
----
 
 ### Example 2 – Feature Selection
 
@@ -130,8 +117,6 @@ model.fit(X_train, y_train)
 print("Accuracy (selected features):", model.score(X_test, y_test))
 ```
 
----
-
 ## Intermediate Strategies (with Code)
 
 ### Example 3 – Trying Different Models
@@ -150,8 +135,6 @@ for model in models:
     print(type(model).__name__, model.score(X_test, y_test))
 ```
 
----
-
 ## Advanced Strategy – Feature Scaling (Important)
 
 ```python
@@ -168,8 +151,6 @@ model.fit(X_train_scaled, y_train)
 print("Accuracy after scaling:", model.score(X_test_scaled, y_test))
 ```
 
----
-
 # 4. Cross-Validation
 
 ## Basic Example
@@ -185,8 +166,6 @@ scores = cross_val_score(model, X, y, cv=5)
 print(scores)
 ```
 
----
-
 ## Intermediate Example – Comparing CV vs Train-Test
 
 ```python
@@ -199,8 +178,6 @@ model.fit(X_train, y_train)
 print("Train-Test Accuracy:", model.score(X_test, y_test))
 print("Cross-Val Mean:", scores.mean())
 ```
-
----
 
 ## Advanced Example – Visualizing Stability
 
@@ -215,8 +192,6 @@ Interpretation:
 
 - Low std → stable model
 - High std → unstable model
-
----
 
 # 6. Model Comparison
 
@@ -238,8 +213,6 @@ for name, model in models.items():
     print(name, model.score(X_test, y_test))
 ```
 
----
-
 ## Intermediate Example – Using Cross-Validation for Comparison
 
 ```python
@@ -247,8 +220,6 @@ for name, model in models.items():
     scores = cross_val_score(model, X, y, cv=5)
     print(name, scores.mean())
 ```
-
----
 
 ## Advanced Example – Structured Comparison
 
@@ -265,8 +236,6 @@ for model_name, score in results.items():
 
 This helps in selecting the best model systematically.
 
----
-
 ## Why Not Single Train-Test Split?
 
 Single split can be unreliable:
@@ -274,8 +243,6 @@ Single split can be unreliable:
 ```text
 Model performance depends on how data is split
 ```
-
----
 
 ## K-Fold Cross-Validation
 
@@ -285,8 +252,6 @@ Train on K-1 parts, test on 1
 Repeat K times
 Average results
 ```
-
----
 
 ## Basic Example
 
@@ -301,8 +266,6 @@ scores = cross_val_score(model, X, y, cv=5)
 print(scores)
 ```
 
----
-
 ## Intermediate Example
 
 ```python
@@ -310,14 +273,10 @@ print("Mean Accuracy:", scores.mean())
 print("Standard Deviation:", scores.std())
 ```
 
----
-
 ## Advanced Insight
 
 - High variance → unstable model
 - Low variance → stable model
-
----
 
 # 5. Hyperparameter Tuning
 
@@ -330,8 +289,6 @@ Examples:
 - K in KNN
 - Depth of decision tree
 
----
-
 ## Basic Example
 
 ```python
@@ -339,8 +296,6 @@ from sklearn.neighbors import KNeighborsClassifier
 
 model = KNeighborsClassifier(n_neighbors=3)
 ```
-
----
 
 ## Intermediate Example – Trying Different Values
 
@@ -350,8 +305,6 @@ for k in [3, 5, 7]:
     model.fit(X_train, y_train)
     print(k, model.score(X_test, y_test))
 ```
-
----
 
 ## Advanced Example – GridSearchCV
 
@@ -372,13 +325,9 @@ print(grid.best_params_)
 print(grid.best_score_)
 ```
 
----
-
 # 6. Model Comparison
 
 Compare multiple models to select the best one.
-
----
 
 ## Example
 
@@ -396,8 +345,6 @@ for name, model in models.items():
     print(name, model.score(X_test, y_test))
 ```
 
----
-
 # 7. Complete Improved ML Pipeline
 
 ```python
@@ -410,39 +357,27 @@ for name, model in models.items():
 # Step 7: Final model selection
 ```
 
----
-
 # 8. ChatGPT Prompts for Learning (Allowed Use)
-
----
 
 ## A. Model Improvement
 
 - "Why is my model overfitting?"
 - "How can I improve model performance?"
 
----
-
 ## B. Cross-Validation
 
 - "Explain cross-validation with example"
 - "Why is cross-validation better than train-test split?"
-
----
 
 ## C. Hyperparameter Tuning
 
 - "What are hyperparameters in machine learning?"
 - "How does GridSearchCV work?"
 
----
-
 ## D. Debugging
 
 - "Why are my results different every time?"
 - "Explain this sklearn code step by step"
-
----
 
 # 9. Looking Ahead
 
@@ -453,8 +388,4 @@ You now understand:
 - Model improvement
 
 This completes the **full machine learning workflow**.
-
----
-<!-- 
-**End of Week 09 Lecture** -->
 
