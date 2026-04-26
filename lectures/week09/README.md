@@ -1,11 +1,11 @@
 # AI-216: Programming for Artificial Intelligence
-## Week 16 – Model Improvement, Cross-Validation & Hyperparameter Tuning
+## Week 09 – Model Improvement, Cross-Validation & Hyperparameter Tuning
 
 ---
 
 ## Lecture Overview
 
-In Week 15, you learned how to:
+In Week 08, you learned how to:
 
 - Train machine learning models
 - Evaluate model performance
@@ -455,6 +455,6 @@ You now understand:
 This completes the **full machine learning workflow**.
 
 ---
-
-**End of Week 16 Lecture**
+<!-- 
+**End of Week 09 Lecture** -->
 
