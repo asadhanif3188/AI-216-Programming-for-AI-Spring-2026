@@ -1,9 +1,9 @@
 # AI-216 – Programming for Artificial Intelligence
-## Lab 16: Model Tuning & Cross-Validation
+## Lab 09: Model Tuning & Cross-Validation
 
 
 
-### Week #: 16  
+### Week #: 09
 ### Topic: Model Improvement, Cross-Validation & Hyperparameter Tuning
 
 
