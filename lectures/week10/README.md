@@ -1,8 +1,6 @@
 # AI-216: Programming for Artificial Intelligence
 ## Week 10 – End-to-End AI Project & Deployment Mindset
 
----
-
 ## Lecture Overview
 
 So far, you have learned how to:
@@ -17,8 +15,6 @@ Now, we take the final step:
 
 This lecture focuses on building a **complete AI system mindset**.
 
----
-
 ## Learning Objectives
 
 After this lecture, students will be able to:
@@ -28,8 +24,6 @@ After this lecture, students will be able to:
 - Save and reuse trained models
 - Understand basic deployment concepts
 - Identify real-world challenges in AI systems
-
----
 
 # 1. End-to-End AI Workflow
 
@@ -41,7 +35,6 @@ A real AI system is more than just a model.
 Problem → Data → Cleaning → Feature Engineering → Model → Evaluation → Improvement → Deployment
 ```
 
----
 
 ## Basic Example – Student Performance Prediction
 
@@ -49,7 +42,6 @@ Problem:
 
 > Predict whether a student will pass based on study hours and sleep.
 
----
 
 ## Implementation (Basic Pipeline)
 
@@ -72,7 +64,6 @@ model.fit(X_train, y_train)
 print(model.predict([[6,5]]))
 ```
 
----
 
 # 2. Structuring an AI Project
 
@@ -90,7 +81,6 @@ project/
 └── main.py
 ```
 
----
 
 ## Intermediate Example – Modular Code
 
@@ -113,7 +103,6 @@ def train_model(X, y):
     return model
 ```
 
----
 
 ## Advanced Insight
 
@@ -123,7 +112,6 @@ Benefits of modular design:
 - Maintainability
 - Scalability
 
----
 
 # 3. Saving and Loading Models
 
@@ -132,7 +120,6 @@ Benefits of modular design:
 - Avoid retraining every time
 - Use model in applications
 
----
 
 ## Basic Example
 
@@ -146,7 +133,6 @@ joblib.dump(model, "model.pkl")
 model = joblib.load("model.pkl")
 ```
 
----
 
 ## Intermediate Example – Using Saved Model
 
@@ -157,7 +143,6 @@ prediction = model.predict([[6,5]])
 print(prediction)
 ```
 
----
 
 # 4. Deployment Mindset (Intro)
 
@@ -165,7 +150,6 @@ print(prediction)
 
 Deployment means making the model available for real-world use.
 
----
 
 ## Simple Deployment Simulation
 
@@ -177,7 +161,6 @@ def predict_pass(hours, sleep):
 print(predict_pass(6,5))
 ```
 
----
 
 ## Real-World Examples
 
@@ -185,11 +168,9 @@ print(predict_pass(6,5))
 - Recommendation systems
 - Fraud detection
 
----
 
 # 5. Common Challenges in Real AI Systems
 
----
 
 ## Data Issues
 
@@ -197,21 +178,18 @@ print(predict_pass(6,5))
 - Noisy data
 - Changing data (data drift)
 
----
 
 ## Model Issues
 
 - Overfitting in production
 - Performance degradation
 
----
 
 ## System Issues
 
 - Slow predictions
 - Scaling problems
 
----
 
 # 6. Complete End-to-End Project (File-Based Structure)
 
@@ -227,7 +205,6 @@ project/
 └── main.py
 ```
 
----
 
 ## Step 1: preprocessing.py
 
@@ -243,7 +220,6 @@ def load_and_preprocess():
     return X, y
 ```
 
----
 
 ## Step 2: train.py
 
@@ -261,7 +237,6 @@ def train_model(X, y):
     return model, X_test, y_test
 ```
 
----
 
 ## Step 3: evaluate.py
 
@@ -276,7 +251,6 @@ def evaluate_model(model, X_test, y_test):
     print(classification_report(y_test, predictions))
 ```
 
----
 
 ## Step 4: predict.py
 
@@ -296,7 +270,6 @@ def predict_sample(model, sample):
     return model.predict([sample])
 ```
 
----
 
 ## Step 5: main.py
 
@@ -323,7 +296,6 @@ loaded_model = load_model()
 print(predict_sample(loaded_model, X_test.iloc[0]))
 ```
 
----
 
 ## Key Learning Outcome
 
@@ -333,38 +305,32 @@ Students should understand:
 - How data flows between files
 - How a complete AI system is built and executed
 
----
 
 # 7. ChatGPT Prompts for Learning (Allowed Use)
 
----
 
 ## A. Project Understanding
 
 - "Explain end-to-end machine learning pipeline"
 - "How do I structure a machine learning project in Python?"
 
----
 
 ## B. Model Saving & Deployment
 
 - "How to save and load models using joblib?"
 - "Explain model deployment in simple terms"
 
----
 
 ## C. Debugging
 
 - "Why is my saved model not working?"
 - "Explain this ML pipeline step by step"
 
----
 
 ## D. Conceptual Thinking
 
 - "What problems occur when deploying ML models?"
 
----
 
 # 8. Final Takeaway
 
@@ -375,7 +341,6 @@ You can now:
 - Structure AI projects
 - Think about real-world deployment
 
----
 
 ## Course Completion Insight
 
@@ -385,7 +350,6 @@ Data → Model → Evaluation → Improvement → Deployment
 
 This is the **complete AI workflow**.
 
----
 
 **End of Week 10 Lecture**
 
